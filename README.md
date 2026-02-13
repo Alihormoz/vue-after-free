@@ -9,9 +9,6 @@
 
 
 
-> [!NOTE]
-> **Need help or having issues?** [Join the discord](https://discord.gg/asBgEtjjVt)
-
 # Vue After Free Userland
 CVE-2018-4441 was shortly applied but due to instability and bad success rate it was dropped.    
 CVE-2017-7117 is used for the userland, and has been chained with Lapse and Poopsploit(Netctrl) kernel exploits on respective firmwares marked below.
@@ -48,9 +45,6 @@ Closing and reopening Vue is required between running JS payloads, but .bin or .
 
 **Q: Can I run the jailbreak offline?**
 No. PS Vue requires any form of network connection. Internet is not required, so you can use any network like home WiFi, a hotspot from your mobile phone, a network from a microcontroller like ESP32, or an Ethernet network from a repurposed PPPwn device.
-
-**Q: I am getting "This service requires you to sign in to PlayStation Network" even after replacing the save file, how can I fix it?**
-Your Vue app most likely updated. This usually happens when not using a DNS or blocking Sony servers. You will have to delete and reinstall it.
 
 **Q: My payload is not recognized, what should I do?**
 Format your USB drive to MBR partition and exFAT format.
@@ -114,9 +108,6 @@ A network connection of any kind is required, before trying to run Vue please co
   11. Optionally after jailbreaking run the [np-fake-signin](https://github.com/Vuemony/vue-after-free/blob/main/README.md#np-fake-signin) payload to avoid the PSN pop-up.
   * User account ID is "1111111111111111" you cannot change it but you can create another user and fake activate it (instructions below), then while jailbroken follow the instructions above for jailbroken users to set up PS Vue while signed into the newly activated account.
 
-### Updating Vue Exploit
-1. Download the `VueManualSetup.7z` and replace download0.dat in `/user/download/CUSA000960/` with FTP while jailbroken. 
-
 # Connecting to the internet.
   1. Navigate to Settings > System > Automatic Downloads, and uncheck "Featured Content", "System Software Update Files" and "Application Update Files".
   2. Navigate to Settings > Network > Check Connect to the Internet, then Set Up Internet Connection.
@@ -125,7 +116,7 @@ A network connection of any kind is required, before trying to run Vue please co
   5. IP Address: Automatic
   6. DHCP Host Name: Do Not Specify
   7. DNS Settings: Manual
-  8. Primary DNS: 62.210.38.117 (Leave the secondary blank as it is)
+  8. Primary DNS: 62.210.38.117 (Leave the secondary blank as it is and if the DNS dont works ypu can use 127.0.0.2)
   9. MTU Settings: Automatic
   10. Proxy Server: Do Not Use
   11. Test the internet connection if you get an IP address it's working.
@@ -159,7 +150,7 @@ In config.js you can add .bin or .elf files to be loaded automatically on kernel
 Example: `/mnt/sandbox/download/CUSA00960/payloads/kernel_dumper.bin`
 
 # NP-Fake-SignIn
-The np-fake-signin payload gets rid of the first PS Vue pop-up asking you to sign into PSN. It can be launched from the payloads menu.
+The [np-fake-signin](https://github.com/earthonion/np-fake-signin) payload gets rid of the first PS Vue pop-up asking you to sign into PSN. It can be launched from the payloads menu.
 
 # Creating a separate user
 If you wish to use a new account instead of the default one in the system backup.
@@ -183,6 +174,9 @@ If you wish to use a new account instead of the default one in the system backup
 - [Lua Loader project](https://github.com/shahrilnet/remote_lua_loader) — Remote Lua loader foundation
 - [Cryptogenic](https://github.com/Cryptogenic/PS4-6.20-WebKit-Code-Execution-Exploit) — Refence for CVE-2018-4441
 - [rebelle3](https://github.com/rebelle3/cve-2017-7117) — Reference for CVE-2017-7117
+- [ItsJokerZz](https://github.com/ItsJokerZz) — FPKGi
+- [LightingMods](https://github.com/LightningMods) — Itemzflow
+- [Lapy](https://github.com/Lapy055) — PS4-Xplorer
 
 ## payload sources:
 - [elfldr.elf](https://github.com/ps4-payload-dev/elfldr) by John Törnblom
